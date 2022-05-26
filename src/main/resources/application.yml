@@ -1,0 +1,11 @@
+server:
+  host: 127.0.0.1
+  port: 1111
+  size: 128
+  netty:
+    boss-count: 1
+    worker-count: 5
+    keep-alive: true
+    backlog: 10
+  ssl:
+    value: false;
