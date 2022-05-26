@@ -28,6 +28,7 @@ public class NettyConfiguration {
                 .handler(new LoggingHandler(LogLevel.DEBUG))
                 .childHandler(dokkaebiChannelInitializer);
         b.option(ChannelOption.SO_BACKLOG, nettyProperties.getBacklog());
+        b.option(ChannelOption.SO_REUSEADDR,true);
         return b;
     }
 

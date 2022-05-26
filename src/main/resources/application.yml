@@ -8,4 +8,8 @@ server:
     keep-alive: true
     backlog: 10
   ssl:
-    value: false;
+    value: false
+
+#https://stackoverflow.com/questions/43574234/how-to-prevent-embedded-netty-server-from-starting-with-spring-boot-starter-webf
+#진짜 찾는다고 개고생했다
+spring.main.web-application-type: none

@@ -85,7 +85,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 //    }
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
-        ((ByteBuf) msg).release();
+        ctx.write(msg);
+        ctx.flush();
     }
 //    @Override
 //    public void channelActive(ChannelHandlerContext ctx) {
